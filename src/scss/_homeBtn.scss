@@ -1,5 +1,5 @@
 .home {
-  margin: 1em;
+  margin: 2em;
   width: 100%;
   text-align: center;
   &-btn {
@@ -11,5 +11,20 @@
     padding: 20px 50px;
     margin: auto;
     background: $color-red;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: $color-dark-red;
+      transform: scale(1.07) translateY(-1px);
+      box-shadow: 2px 3px 34px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    &:active {
+      outline: none;
+      border: none;
+      background: $color-dark-red;
+      transform: scale(1) translateY(0.5px);
+      box-shadow: 2px 3px 34px -10px rgba(0, 0, 0, 0.5);
+    }
   }
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "buildScss": "node-sass src/scss/main.scss src/css/main.css -w",
-    "goLive": "live-server",
+    "goLive": "live-server src/",
     "start": "npm-run-all -p buildScss goLive"
   },
   "author": "",

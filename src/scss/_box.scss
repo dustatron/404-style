@@ -1,14 +1,192 @@
 .box {
-  height: 400px;
-  width: 100%;
+  position: relative;
   background: $color-white;
-  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  height: 50em;
+  width: 100%;
+  padding: 60px 15px 5px 15px;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.5);
+
+  &-bubble {
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    animation: wobble 6s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+
+    &-block-thought-1 {
+      position: absolute;
+      top: 120%;
+      left: 10%;
+      height: 13px;
+      width: 13px;
+      background: $color-black;
+    }
+    &-block-thought-2 {
+      position: absolute;
+      top: 155%;
+      left: 0%;
+      height: 7px;
+      width: 7px;
+      background: $color-black;
+    }
+
+    &-block-1 {
+      position: absolute;
+      top: -9%;
+      left: 10%;
+      width: 80%;
+      height: 5px;
+      background: $color-black;
+    }
+    &-block-1-left {
+      position: absolute;
+      top: 20%;
+      left: -10%;
+      width: 15%;
+      height: 60%;
+      background: $color-black;
+    }
+    &-block-2 {
+      position: absolute;
+      top: 100%;
+      left: 10%;
+      width: 80%;
+      height: 5px;
+      background: $color-black;
+    }
+    &-block-2-right {
+      position: absolute;
+      top: 20%;
+      left: 100%;
+      width: 10%;
+      height: 60%;
+      background: $color-black;
+    }
+
+    &-body {
+      font-size: 1.9em;
+      font-weight: 800;
+      padding: 15px 20px;
+      color: $color-white;
+      background: $color-black;
+    }
+  }
 
   &-404 {
-    padding: 4em;
+    font-size: 15.8em;
+    font-weight: bold;
+    position: relative;
+
+    &-green-4 {
+      color: $color-green;
+      display: inline-block;
+    }
+    // GHOST OBJECT
+    &-ghost {
+      position: absolute;
+      display: inline-block;
+      top: 23px;
+      left: 35%;
+
+      &-body {
+        width: 98px;
+        height: 114px;
+        background: $color-red;
+        border-radius: 60px 60px 0px 0px;
+      }
+      &-eye-right {
+        /* ghost's right eye */
+        position: absolute;
+        width: 22px;
+        height: 21px;
+        left: 22%;
+        top: 10%;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+      }
+      &-eye-left {
+        /* ghost's left eye */
+        position: absolute;
+        width: 22px;
+        height: 21px;
+        left: 13%;
+        top: 10%;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+      }
+      &-eye-pupil {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        left: 5px;
+        top: 10px;
+        border-radius: 50%;
+        background: #000000;
+        animation: look-around 3s infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+      }
+    } // End Ghost
+    &-blue-4 {
+      padding-left: 90px;
+      display: inline-block;
+      color: $color-blue;
+    }
+  }
+  &-subtitle {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+  }
+  &-copy {
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+  }
+}
+
+@keyframes look-around {
+  0% {
+    left: 5px;
+    top: 2px;
+  }
+  5% {
+    left: 5px;
+    top: 2px;
+  }
+  50% {
+    left: 10px;
+    top: 0px;
+  }
+  80% {
+    left: 10px;
+    top: 0px;
+  }
+  82% {
+    left: 5px;
+    top: 5px;
+  }
+  100% {
+    left: 5px;
+    top: 5px;
+  }
+}
+
+@keyframes wobble {
+  0% {
+    top: 12%;
+  }
+  100% {
+    top: 10%;
   }
 }
