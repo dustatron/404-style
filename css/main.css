@@ -27,9 +27,14 @@ body {
   height: 400px;
   width: 100%;
   background: #fff;
-  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.5); }
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .box-404 {
+    padding: 4em; }
 
-/* Rectangle 9 */
 .home {
   margin: 1em;
   width: 100%;
