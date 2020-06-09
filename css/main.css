@@ -1,0 +1,206 @@
+/* Basic Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #333;
+  font-family: 'Roboto', sans-serif; }
+
+.container {
+  max-width: 85em;
+  height: 70vh;
+  padding: 3em;
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.box {
+  position: relative;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50em;
+  width: 100%;
+  padding: 60px 15px 5px 15px;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.5); }
+  .box-bubble {
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    animation: wobble 6s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease; }
+    .box-bubble-block-thought-1 {
+      position: absolute;
+      top: 120%;
+      left: 10%;
+      height: 13px;
+      width: 13px;
+      background: black; }
+    .box-bubble-block-thought-2 {
+      position: absolute;
+      top: 155%;
+      left: 0%;
+      height: 7px;
+      width: 7px;
+      background: black; }
+    .box-bubble-block-1 {
+      position: absolute;
+      top: -9%;
+      left: 10%;
+      width: 80%;
+      height: 5px;
+      background: black; }
+    .box-bubble-block-1-left {
+      position: absolute;
+      top: 20%;
+      left: -10%;
+      width: 15%;
+      height: 60%;
+      background: black; }
+    .box-bubble-block-2 {
+      position: absolute;
+      top: 100%;
+      left: 10%;
+      width: 80%;
+      height: 5px;
+      background: black; }
+    .box-bubble-block-2-right {
+      position: absolute;
+      top: 20%;
+      left: 100%;
+      width: 10%;
+      height: 60%;
+      background: black; }
+    .box-bubble-body {
+      font-size: 1.9em;
+      font-weight: 800;
+      padding: 15px 20px;
+      color: #fff;
+      background: black; }
+  .box-404 {
+    font-size: 15.8em;
+    font-weight: bold;
+    position: relative; }
+    .box-404-green-4 {
+      color: #31d82e;
+      display: inline-block; }
+    .box-404-ghost {
+      position: absolute;
+      display: inline-block;
+      top: 23px;
+      left: 35%; }
+      .box-404-ghost-body {
+        width: 98px;
+        height: 114px;
+        background: #ff0000;
+        border-radius: 60px 60px 0px 0px; }
+      .box-404-ghost-eye-right {
+        /* ghost's right eye */
+        position: absolute;
+        width: 22px;
+        height: 21px;
+        left: 22%;
+        top: 10%;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid #000000;
+        box-sizing: border-box; }
+      .box-404-ghost-eye-left {
+        /* ghost's left eye */
+        position: absolute;
+        width: 22px;
+        height: 21px;
+        left: 13%;
+        top: 10%;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid #000000;
+        box-sizing: border-box; }
+      .box-404-ghost-eye-pupil {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        left: 5px;
+        top: 10px;
+        border-radius: 50%;
+        background: #000000;
+        animation: look-around 3s infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out; }
+    .box-404-blue-4 {
+      padding-left: 90px;
+      display: inline-block;
+      color: #51b7cd; }
+  .box-subtitle {
+    font-size: 2.5em;
+    margin-bottom: 1em; }
+  .box-copy {
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300; }
+
+@keyframes look-around {
+  0% {
+    left: 5px;
+    top: 2px; }
+  5% {
+    left: 5px;
+    top: 2px; }
+  50% {
+    left: 10px;
+    top: 0px; }
+  80% {
+    left: 10px;
+    top: 0px; }
+  82% {
+    left: 5px;
+    top: 5px; }
+  100% {
+    left: 5px;
+    top: 5px; } }
+
+@keyframes wobble {
+  0% {
+    top: 12%; }
+  100% {
+    top: 10%; } }
+
+.home {
+  margin: 2em;
+  width: 100%;
+  text-align: center; }
+  .home-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 1.6em;
+    font-weight: bolder;
+    color: #fff;
+    padding: 20px 50px;
+    margin: auto;
+    background: #ff0000;
+    transition: all 0.2s ease-in-out; }
+    .home-btn:hover {
+      background: #cb2222;
+      transform: scale(1.07) translateY(-1px);
+      box-shadow: 2px 3px 34px -5px rgba(0, 0, 0, 0.5); }
+    .home-btn:active {
+      outline: none;
+      border: none;
+      background: #cb2222;
+      transform: scale(1) translateY(0.5px);
+      box-shadow: 2px 3px 34px -10px rgba(0, 0, 0, 0.5); }
